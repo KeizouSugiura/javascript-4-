@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/js0402-2_work.css" type="text/css" media="screen" />
+  <script>
+    function getName() {
+      // テキストボックスに値が入力されているか判定を行う
+      if (document.form1.namae.value != "") {
+        // 値を格納する変数
+        let username;
+        // テキストボックスに入力された値を変数usernameに格納
+        username = document.form1.namae.value;
+        // spanタグに変数usernameの中身を設定。
+        document.getElementById("output").innerHTML = username + "さん、こんにちは！";
+      } else {
+        document.getElementById("output").innerHTML = "あなたの名前を入力してください。";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="js0402">
+    <form name="form1" method="post" action="">
+      <p align="center">
+        <input type="text" name="namae" placeholder="名前を入力してください" /><br>
+        <br>
+        <span id="output"></span>
+      </p>
+      <p align="center">
+        <input type="button" value="送信" onclick="getName()" />
+      </p>
+    </form>
+  </div>
+</body>
+
+</html>

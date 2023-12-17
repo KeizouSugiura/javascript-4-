@@ -1,0 +1,44 @@
+
+body {
+}
+
+#js0402 {
+	width: 800px;
+	margin: 50px auto;
+}
+
+#js0402 h1 {
+	border-bottom: 5px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+#js0402 span {
+	line-height: 40px;
+	font-weight: bold;
+}
+
+#js0402 table {
+	width: 800px;
+	border-collapse: collapse;
+}
+
+#js0402 table td {
+	border: 1px solid #ccc;
+	padding: 20px;
+	vertical-align: top;
+	text-align: left;
+}
+
+#js0402 table td textarea {
+	width: 350px;
+}
+
+#js0402 table td p {
+	margin: 0px 0px 15px 0px;
+}
+
+#js0402 #soushin {
+	width: 70px;
+	height: 30px;
+}

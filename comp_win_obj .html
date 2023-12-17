@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Windowオブジェクト</title>
+  <script>
+    // ===============alert()=======================================
+
+    function alertBtn() {
+      alert("サンプルです");
+    }
+
+
+    // ===============confirm()=======================================
+    function confirmBtn() {
+      if (confirm("送信してもよろしいですか？")) {
+        // OKボタンを押された場合の処理
+        alert("OKボタンがクリックされました");
+      } else {
+        // キャンセルボタンを押された場合の処理
+        alert("キャンセルボタンがクリックされました");
+      }
+    }
+
+    // //  もしくは下記の方法もあります。
+    // let flg;
+    // flg = confirm("送信してもよろしいですか？"); //// 戻り値を変数に代入します。
+    // if (flg) {
+    //   //    OKボタンを押された場合の処理
+    //   alert("OKボタンがクリックされました");
+    //
+    // } else {
+    //   //    キャンセルボタンを押された場合の処理
+    //   alert("キャンセルボタンがクリックされました");
+    // }
+    //
+
+
+
+    // ===============open()=======================================
+    // // 新しいウィンドウの情報を格納する変数
+    let sub;
+
+    function window_open() {
+      // Winスクールのページを開く
+      sub = open("https://winschool.jp/", "new_window", "width=500,height=500");
+    }
+    //===============close()=======================================
+    function window_close() {
+      // 新しいウィンドウが開いていれば閉じる
+      if (sub) {
+        sub.close();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- alert()メソッド -->
+  <input type="button" value="windowオブジェクトのalert()メソッドです" onClick="alertBtn()">
+  <br><br><br>
+
+  <!-- confirmメソッド -->
+  <input type="button" value="windowオブジェクトのconfirm()メソッドです" onClick="confirmBtn()">
+  <br><br><br>
+
+  <!-- open()メソッド -->
+  <input type="button" name="open_button" value="ウィンドウを開ける" onClick="window_open();" />
+
+  <!-- close()メソッド -->
+  <input type="button" name="close_button" value="ウィンドウを閉じる" onClick="window_close();" />
+</body>
+
+</html>

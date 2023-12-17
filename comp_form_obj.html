@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formオブジェクト</title>
+  <script>
+    // ==========テキストボックス===========================================
+    function txtBox() {
+      let text1; // テキストボックスの値を格納する変数
+      text1 = document.form1.text1.value; // 最後のvalueで値を取得できる
+      alert(text1);
+    }
+
+
+    // ==========テキストエリア===========================================
+    function txtArea() {
+      let text2;
+      // 右側はform1のtext2の値を取得という意味。
+      text2 = document.form1.text2.value;
+      alert(text2);
+    }
+
+
+    // ==========チェックボックス===========================================
+    function chkBox() {
+      let fruits = []; // 複数の値を取得するために配列を作成
+
+      for (i = 0; i < document.form1.text3.length; i++) {
+        // 値がチェックされているもののみ取得
+        if (document.form1.text3[i].checked) {
+          fruits[i] = document.form1.text3[i].value;
+          alert(fruits[i]);
+        }
+      }
+    }
+
+
+    // ==========ラジオボタン===========================================
+    function radioBtn() {
+      let sweets = "";
+
+      for (i = 0; i < document.form1.text4.length; i++) {
+        // 判定はチェックボックスと同じ方法で実現できます。
+        if (document.form1.text4[i].checked) {
+          sweets = document.form1.text4[i].value;
+          break; // ラジオボタンは値を1個のみ取得なので、取得後はfor文を強制的に抜けます。
+        }
+      }
+      alert(sweets);
+    }
+
+
+    // ==========プルダウンメニュー===========================================
+    function pullDown() {
+      let index;
+      let pref;
+      // selectedで選択されている要素の番号を取得する。
+      index = document.form1.text5.selectedIndex;
+      // selectedで選択されている値を取得する
+      pref = document.form1.text5.options[index].value;
+      alert(pref);
+    }
+  </script>
+</head>
+
+<body>
+  <form name="form1" action="">
+    <!-- // ==========テキストボックス=========================================== -->
+    <input type="text" name="text1" value="" />
+    <input type="button" value="text" onClick="txtBox()">
+    <br><br>
+
+    <!-- // ==========テキストエリア=========================================== -->
+    <textarea name="text2"></textarea>
+    <input type="button" value="textarea" onClick="txtArea()">
+    <br><br>
+
+    <!-- // ==========チェックボックス=========================================== -->
+    <input type="checkbox" name="text3" value="りんご">りんご<br>
+    <input type="checkbox" name="text3" value="みかん">みかん<br>
+    <input type="checkbox" name="text3" value="バナナ">バナナ<br>
+    <input type="checkbox" name="text3" value="パイナップル">パイナップル<br>
+    <input type="button" value="checkbox" onClick="chkBox()">
+    <br><br>
+
+
+    <!-- // ==========ラジオボタン=========================================== -->
+    <input type="radio" name="text4" value="ケーキ">ケーキ<br>
+    <input type="radio" name="text4" value="チョコレート">チョコレート<br>
+    <input type="radio" name="text4" value="マシュマロ">マシュマロ<br>
+    <input type="button" value="radio" onClick="radioBtn()">
+    <br><br>
+
+
+    <!-- // ==========プルダウンメニュー=========================================== -->
+    <select name="text5">
+      <option value="京都">京都</option>
+      <option value="大阪">大阪</option>
+      <option value="滋賀">滋賀</option>
+      <option value="兵庫">兵庫</option>
+      <option value="奈良">奈良</option>
+      <option value="和歌山">和歌山</option>
+      <option value="三重">三重</option>
+    </select>
+    <input type="button" value="select" onClick="pullDown()">
+
+
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+body {
+	width: 800px;
+	margin: 200px auto;
+	text-align: center;
+}
+
+#tbl {
+	margin: 20px auto;
+	border-collapse: collapse;
+}
+
+#tbl td, #tbl th {
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+
+#tbl th {
+	background: #e0e0e0;
+}
+
+#add {
+	margin-bottom: 20px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="css/js0402.css" type="text/css" />
+<script>
+function htmlChange() {
+  // 1年2組の成績表の文言を追記
+  document.getElementById("ttl").innerHTML = "1年2組の成績表";
+  // 平均点の表示を行う
+  let avg;
+  avg = document.createElement('strong');
+  let str;
+  str = document.createTextNode('平均は86.25点です');
+  // 平均点のstrongタグに文字列を設定
+  avg.appendChild(str);
+  // divタグに上記のstrongタグの内容を設定
+  let add;
+  add = document.getElementById("add");
+
+  add.appendChild(avg);
+
+  // idがttlBoxのdivタグのインスタンスを取得
+  ttlBox = document.getElementById("ttl_box");
+  // 削除を行う。
+  ttlBox.removeChild(ttlBox.lastChild);
+}
+</script>
+
+</head>
+
+<body>
+<div id="ttl_box"><h1 id="ttl">成績表</h1></div>
+<table id="tbl">
+<tr><th>名前</th><th>成績</th></tr>
+<tr><td class="student">田中</td><td class="score">100</td></tr>
+<tr><td class="student">山本</td><td class="score">90</td></tr>
+<tr><td class="student">小山</td><td class="score">70</td></tr>
+<tr><td class="student">大木</td><td class="score">85</td></tr>
+</table>
+<div id="add"></div>
+
+
+<input type="button" value="処理" onclick="htmlChange()" />
+
+
+</body>
+</html>
+
+
+</body>
+</html>

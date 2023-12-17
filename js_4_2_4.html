@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="change" onmouseover="over()" onmouseleave="leave()" style="font-size:30px; width:350px; text-align:center; font-weight: bold;">CHANGE!!</div>
+
+  <script>
+    let styleChange = document.getElementById("change");
+
+    function over() {
+      styleChange.style.color = "white";
+      styleChange.style.backgroundColor = "#000";
+      styleChange.innerHTML = "OVER";
+    }
+
+
+    function leave() {
+      styleChange.style.backgroundColor = "#fff";
+      // styleChange.style.fontSize="30px";
+      styleChange.style.color = "#000";
+      styleChange.style.textAlign = "center";
+      styleChange.innerHTML = "LEAVE";
+      styleChange.style.border="solid 1px #000"
+    }
+  </script>
+</body>
+
+</html>
