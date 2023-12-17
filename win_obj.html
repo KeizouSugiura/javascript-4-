@@ -15,12 +15,19 @@
 
     // ===============confirm()=======================================
     function confirmBtn() {
-      if(confirm("送信してもよろしいでしょうか?")){
-        alert("okボタンがクリックされました");
-      }else{
-        alert("キャンセルがクリックされました");
+      // if(confirm("送信してもよろしいでしょうか?")){
+      //   alert("okボタンがクリックされました");
+      // }else{
+      //   alert("キャンセルがクリックされました");
+      // }
+      let flg = window.confirm("送信してもよろしいですか？");
+      if (flg == true) {
+        alert("OKボタンがクリックされました");
+        console.log(flg);
+      } else if(flg == false) {
+        alert("キャンセルボタンがクリックされました");
+        console.log(flg);
       }
-
     }
 
     // ===============open()=======================================
