@@ -32,12 +32,19 @@
 
     // ===============open()=======================================
     // // 新しいウィンドウの情報を格納する変数
+      let sub;
     function window_open() {
+
+      sub = open("https://winschool.jp/","new_window","width=500,height=500");
+
 
     }
     //===============close()=======================================
     function window_close() {
       // 新しいウィンドウが開いていれば閉じる
+      if(sub){
+        sub.close();
+      }
 
     }
   </script>
